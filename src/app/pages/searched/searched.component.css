@@ -1,0 +1,54 @@
+.container{
+  display: flex;
+}
+
+.example-container {
+  width: 100%;
+  min-height: 78.6vh;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+  
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+  width: 20rem;
+}
+.menuItem{
+  list-style: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.menuItem:hover{
+  background-color: black;
+  color: white;
+}
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem 3rem;
+}
+.text a{
+  text-decoration: none;
+  border: solid red 1px;
+}
+
+:host ::ng-deep .enlaceEmbuido { 
+  text-decoration: solid;
+  font-weight: 700;
+  cursor: pointer;
+}
+:host ::ng-deep .enlaceEmbuido:hover { 
+  background-color: black;
+  color: white;
+}
+
+

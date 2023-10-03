@@ -1,0 +1,29 @@
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .example-sidenav {
+    padding: 20px;
+    width: 20rem;
+  }
+
+  .menuItem{
+    list-style: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .menuItem:hover{
+    background-color: black;
+    color: white;
+  }
+
+  .example-container {
+    width: 100%;
+    min-height: 78.6vh;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+    

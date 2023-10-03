@@ -1,0 +1,8 @@
+<div class="header">
+    <div >
+        <a class="logo"  href="start"> LLamaPedia </a>
+    </div>
+    <div class="itemsDiv">
+        <a class="itemenu" *ngFor="let item of itemenu" routerLink="{{item.url}}">{{item.nameUrl}}</a>
+    </div>
+</div>

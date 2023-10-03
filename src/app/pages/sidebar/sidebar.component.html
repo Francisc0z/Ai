@@ -1,0 +1,12 @@
+<div class="sidenav">
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="showFiller">
+          <p>Indice de conocimientos</p>
+          <ul *ngFor="let item of navItems">
+            <li class="menuItem" (click)="passItem(item)"> {{item}} </li>
+          </ul>
+        </mat-drawer>
+      </mat-drawer-container>
+    </div>
+    <div>
+</div>

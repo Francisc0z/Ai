@@ -1,0 +1,39 @@
+.header{
+    border: solid black 1px ;
+    min-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.itemsDiv{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.itemenu{
+    text-transform: uppercase;
+
+}
+.itemenu, .logo{
+    margin: 15px;
+    padding: 3px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.logo{
+    font-size: 30px;
+    border: black 1px solid;
+}
+
+.logo:hover{
+    color: white;
+    background-color: black;
+}
+
+.itemenu:hover{
+    background-color: black;
+    color: white;
+    border: solid 1px white;
+}

@@ -1,0 +1,7 @@
+<div class="container">
+    <app-sidebar></app-sidebar>
+    <div class="content">
+      <h2>{{titleValue | uppercase}}</h2>
+      <div class="text" id="contenedorDinamico"  [innerHTML]="textia | sanitizeHtml"></div>
+    </div>
+</div>
