@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app.routing.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoaderInterceptor } from './pages/interceptors/loader.interceptor';
 import { LoaderComponent } from './pages/shared/loader/loader.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LoaderComponent } from './pages/shared/loader/loader.component';
     FormsModule,
     PagesModule,
     HttpClientModule,
+    MatIconModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

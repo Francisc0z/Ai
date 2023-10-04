@@ -37,11 +37,10 @@ export class LlamaService {
 
   public fetchTGetText(items: string): Observable<string> {
     const arrayTexto = items.split('-')
-    console.log('consulta al texto nuevo');
-
     const body = {
       items: arrayTexto,
     };
+    console.log(JSON.stringify(body))
 
     return this.http.post<any>(`${this.baseUrl}textIa`, {arrayTexto})
       .pipe(

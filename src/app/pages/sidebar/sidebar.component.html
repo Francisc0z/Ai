@@ -5,6 +5,10 @@
           <ul *ngFor="let item of navItems">
             <li class="menuItem" (click)="passItem(item)"> {{item}} </li>
           </ul>
+          <p class="warningColor" *ngIf="errorInSide"> <mat-icon>warning</mat-icon> Surgio un error al cargar la lista </p>
+          <div *ngIf="isLoading" class="imgContainer">
+            <img src="assets/sidebarLoading.svg" alt="">
+          </div>
         </mat-drawer>
       </mat-drawer-container>
     </div>

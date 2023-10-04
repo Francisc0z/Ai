@@ -10,6 +10,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HtmlSanitizerPipe } from './pipes/html-sanitizer.pipe';
 import { AboutComponent } from './about/about.component';
 import { TechsComponent } from './techs/techs.component';
+import {MatIconModule} from '@angular/material/icon'
+
 
 @NgModule({
   declarations: [SearchedComponent, 
@@ -19,7 +21,8 @@ import { TechsComponent } from './techs/techs.component';
     PagesRoutingModule,
     FormsModule,
     MatSidenavModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class PagesModule { }

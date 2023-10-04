@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./start.component.css']
 })
 export class StartComponent implements OnInit{
-  boolPlaceholder:boolean = false
-  searchedText:string = ''
-
+  boolPlaceholder:boolean = false;
+  searchedText:string = '';
+  badSearch:boolean = false;
   constructor(private router: Router) {}
   
 
@@ -20,6 +20,11 @@ export class StartComponent implements OnInit{
     if (this.searchedText) {
       sessionStorage.setItem('searchedParam', this.searchedText);
       this.router.navigate(['/searched', this.searchedText]);
+    }else{
+      this.badSearch = true;
+      setTimeout(() => {
+        this.badSearch = false;
+      }, 2000);
     }
   }
 

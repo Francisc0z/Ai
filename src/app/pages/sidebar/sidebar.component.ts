@@ -11,7 +11,8 @@ export class SidebarComponent implements OnInit{
   navItems : string[] = []
   inputValue: string = '';
   showFiller = true;
-
+  isLoading: boolean = true;
+  errorInSide: boolean = false;
   constructor(private route: ActivatedRoute, private llamaService: LlamaService,
     private router: Router, private elementRef: ElementRef){
       this.inputValue = sessionStorage.getItem('searchedParam')!;
@@ -20,13 +21,17 @@ export class SidebarComponent implements OnInit{
   ngOnInit(): void {    
     this.llamaService.fetchTGetList(this.inputValue).subscribe(navItemsResponse => {
       navItemsResponse = navItemsResponse.replace(/'/g, '');
+      navItemsResponse = navItemsResponse.replace(/`/g, '');
       navItemsResponse = navItemsResponse.replace(/"/g, '');
       let startList = navItemsResponse.indexOf("[");
-      let endList = navItemsResponse.lastIndexOf("]");
-      let listText = navItemsResponse.slice(startList, endList + 2); 
+      let listText = navItemsResponse.slice(startList, navItemsResponse.length + 2); 
       let propiedadesEnArray = listText.replace(/\[|\]|\s/g, "").split(",");
 
       this.navItems = propiedadesEnArray;
+      this.isLoading = false;
+      if(this.navItems.length == 1){
+        this.errorInSide = true;
+      }
     })
   }
 

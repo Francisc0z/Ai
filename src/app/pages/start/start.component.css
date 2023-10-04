@@ -45,3 +45,36 @@
 .show{
     display: none;
 }
+.inputContainer{
+    display: flex;
+}
+.searchAction{
+    padding: 10px;
+    font-weight: 200;
+    margin-left: -50px;
+    cursor: pointer;
+    border: solid black 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchAction:hover{
+    background-color: black;
+    color: white;
+}
+.badSearch{
+    animation-duration: 0.5s;
+    animation-name: badSearch;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes badSearch {
+    0% {
+      background-color: rgb(255, 255, 255);
+    }
+    100% {
+        background-color: rgb(255, 0, 0);
+    }
+  }

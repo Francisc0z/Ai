@@ -1,11 +1,18 @@
 <div class="container">
-    <p class="inititle">Ingrese el lenguaje de programación</p>
-    <input class="initInput" (keydown.enter)="redireccionar()" [(ngModel)]="searchedText" (ngModelChange)="onInputChange($event)" type="text">
+    <p class="inititle">Ingrese el lenguaje de programación/concepto</p>
+    <div class="inputContainer">
+        <input class="initInput" (keydown.enter)="redireccionar()" [(ngModel)]="searchedText" (ngModelChange)="onInputChange($event)" type="text">
+        <div (click)="redireccionar()" class="searchAction" [ngClass]="{'badSearch':badSearch}">
+            <mat-icon>search</mat-icon>
+        </div>
+    </div>    
+    
     <div [ngClass]="{'show': boolPlaceholder}" class="animatedText">
         <h1 class="placeholder">
-            <a href="" class="typewrite" data-period="2000" data-type='[ "Css", "NodeJs", "C++", "Cobol" ]'>
+            <a href="" class="typewrite" data-period="2000" data-type='[ "Css", "Asincronia", "NodeJs", "C++", "Cobol" ]'>
               <span class="wrap"></span>
             </a>
         </h1>
     </div>
+
 </div>

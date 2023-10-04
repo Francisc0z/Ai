@@ -10,6 +10,16 @@
     width: 20rem;
   }
 
+  .imgContainer{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    max-height: 20rem;
+  }
+  .imgContainer img{
+    width: 7rem;
+  }
+
   .menuItem{
     list-style: none;
     font-size: 14px;
@@ -26,4 +36,7 @@
     height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.5);
   }
-    
+
+.warningColor{
+  color: rgba(255, 0, 0, 0.707);
+}
